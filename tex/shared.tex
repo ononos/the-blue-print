@@ -1,0 +1,23 @@
+% -*-coding: utf-8 -*-
+
+%% file contain shared macros for html and pdf renders
+\usepackage{graphicx}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% %% мультииндекс, макет загружаем до hyperref!
+%% %% индекс абриавитур имен секций
+%% \makeindex{defines}
+%% %% индекс перевода граматики
+%% \makeindex{rules}
+
+% Правила
+\newcommand{\RULE}{
+
+\colorbox{black}{\color{white}ПРАВИЛО:} }
+
+\newcommand{\DEFINE}[1]{
+
+\section{ОПРЕДЕЛЕНИЕ: #1}
+
+
+}

@@ -1,0 +1,72 @@
+% -*-coding: utf-8 -*-
+
+% setup for pdf render
+%\documentclass[10pt,a5paper,twoside,openright]{scrbook}
+\documentclass[a5paper,twoside]{scrbook}
+%\documentclass[a5paper]{book}
+%%\documentclass[12pt,oneside,headsepline,tablecaptionabove]{scrbook}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Encodings, fonts... 
+%% this fix render tittle
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{charter}
+%\usepackage{utopia}
+
+\input{./tex/shared.tex}
+
+%\renewcommand{\normalsize}{\fontsize{14pt}{16pt}\selectfont}
+
+%\emergencystretch=25pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% yoba page style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%% \fancyhead[LE,RO]{\slshape \rightmark}
+%% \fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+
+\lhead{\nouppercase{\leftmark}}
+%\rhead{\nouppercase{\rightmark}}
+
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\thechapter.\ #1}{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{backref,
+  bookmarksopen=true,
+  bookmarksopenlevel=2,
+  pdfauthor={\textcopyright\ Anon1007},
+  colorlinks=true}
+
+%\addtolength{\hoffset}{-2cm}
+%\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{1cm}
+\renewcommand\arraystretch{1.2}
+%%% russian 
+\usepackage[russian]{babel}
+%\usepackage{polyglossia}
+%\setdefaultlanguage{russian}
+
+\sloppy
+
+\begin{document}
+
+  \title{THE BLUEPRINT}
+  \date{}
+  \author{TYLER DURDEN \\ перевод SHAV-RIN}
+  \maketitle
+
+  \frontmatter
+  \tableofcontents
+  \input{./tex/preface.tex}
+
+  \mainmatter
+  \input{./tex/main.tex}
+
+\end{document}
